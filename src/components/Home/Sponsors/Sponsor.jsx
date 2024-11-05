@@ -3,7 +3,7 @@ const Sponsor = (props) => {
     return (
         <div className="sponsor">
             <img src={image} alt="" />
-            <p>{props.name}</p>
+            <p className="sponsor-name">{props.name}</p>
         </div>
     );
 };
