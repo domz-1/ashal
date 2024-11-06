@@ -6,6 +6,9 @@ import TodaysOffer from '../components/Home/TodaysOffer/TodaysOffer';
 import { Container } from '@mui/material';
 import LandingSlider from '../components/Home/LandingSlider/LandingSlider';
 import Sponsors from '../components/Home/Sponsors/Sponsors';
+import ElectronicsGrid from '../components/Home/Electronic/ElectronicsGrid';
+import CategoryWrapper from '../components/Home/Categories/CategoryWrapper';
+import WeekendOffer from '../components/Home/WeekendOffer/WeekendOffer';
 const Home = () => {
     return (
         <div className="home">
@@ -25,6 +28,11 @@ const Home = () => {
             </Container>
             <Container>
                 <TodaysOffer />
+            </Container>
+            <Container>
+                <ElectronicsGrid />
+                <CategoryWrapper />
+                <WeekendOffer />
             </Container>
         </div>
     );
