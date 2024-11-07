@@ -9,6 +9,12 @@ import Sponsors from '../components/Home/Sponsors/Sponsors';
 import ElectronicsGrid from '../components/Home/Electronic/ElectronicsGrid';
 import CategoryWrapper from '../components/Home/Categories/CategoryWrapper';
 import WeekendOffer from '../components/Home/WeekendOffer/WeekendOffer';
+import MostCell from './../components/Home/MostCellOld/MostCell';
+import OurPartners from './../components/Home/OurPartners/OurPartners';
+import Newsletter from './../components/Home/Newsletter/Newsletter';
+import Features from '../components/Home/Features/Features';
+
+import Footer from '../components/Home/Footer/Footer';
 const Home = () => {
     return (
         <div className="home">
@@ -34,6 +40,19 @@ const Home = () => {
                 <CategoryWrapper />
                 <WeekendOffer />
             </Container>
+            <Container
+                maxWidth="xl"
+                className="wrapper"
+                sx={{ width: '1500px' }}
+            >
+                <MostCell />
+            </Container>
+            <Container>
+                <OurPartners />
+                <Newsletter />
+            </Container>
+            <Features />
+            <Footer />
         </div>
     );
 };

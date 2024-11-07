@@ -11,25 +11,25 @@ import Category from './Category';
 const CategoryWrapper = () => {
     const productListOne = {
         productOne: {
-            img: C1P1, // Remove the curly braces
+            img: C1P1,
             storeName: 'موديفا ستور',
             productName: 'جاكيت بامبي نسائي',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '17.00 ر.س',
+            oldPrice: '21.00 ر.س',
         },
         productTwo: {
-            img: C1P2, // Remove the curly braces
+            img: C1P2,
             storeName: 'فاكتور ستور',
             productName: 'جاكيت بامبي رجالي',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '18.00 ر.س',
+            oldPrice: '20.00 ر.س',
         },
         productThree: {
-            img: C1P3, // Remove the curly braces
+            img: C1P3,
             storeName: 'النصر الرياضي',
             productName: 'حذاء رياضي',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '16.00 ر.س',
+            oldPrice: '19.00 ر.س',
         },
     };
 
@@ -38,22 +38,22 @@ const CategoryWrapper = () => {
             img: C2P1,
             storeName: 'جسيرك ستور',
             productName: 'كوب خزفي عتيق',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '14.00 ر.س',
+            oldPrice: '18.00 ر.س',
         },
         productTwo: {
             img: C2P2,
             storeName: 'موف ستور',
             productName: 'زهرية المينا الطبيعية',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '15.00 ر.س',
+            oldPrice: '19.00 ر.س',
         },
         productThree: {
             img: C2P3,
             storeName: 'زهرة ستور',
             productName: 'زهرية المينا من الفخار',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '16.00 ر.س',
+            oldPrice: '20.00 ر.س',
         },
     };
 
@@ -62,22 +62,22 @@ const CategoryWrapper = () => {
             img: C3P1,
             storeName: 'جينيرك ستور',
             productName: 'كرسي من الخشب الزان',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '25.00 ر.س',
+            oldPrice: '30.00 ر.س',
         },
         productTwo: {
             img: C3P2,
             storeName: 'فاكتور ستور',
             productName: 'ترابيزة جانبية',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '22.00 ر.س',
+            oldPrice: '27.00 ر.س',
         },
         productThree: {
             img: C3P3,
             storeName: 'موف ستور',
             productName: 'طاولة جانوس الخشبية',
-            price: '19.00 ر.س',
-            oldPrice: '22.34 ر.س',
+            price: '28.00 ر.س',
+            oldPrice: '32.00 ر.س',
         },
     };
     return (

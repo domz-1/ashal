@@ -5,10 +5,10 @@ const Item = (props) => {
             <div className="item-image">
                 <img src={image} alt="" />
                 <div className="dno">
+                    {isOffer && <div className="offer">{isOffer}</div>}
                     {description && (
                         <div className="description">{description}</div>
                     )}
-                    {isOffer && <div className="offer">{isOffer}</div>}
                 </div>
             </div>
             <div className="item-details">

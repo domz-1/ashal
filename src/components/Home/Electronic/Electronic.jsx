@@ -65,12 +65,15 @@ const Electronic = (props) => {
                 backgroundColor: bgcolor,
                 display: 'flex',
                 flexDirection: 'row',
+                position: 'relative',
+                alignItems: 'start',
+                justifyContent: 'center',
             }}
         >
             <div
                 className="text"
                 style={{
-                    paddingTop: '20px',
+                    paddingTop: '16px',
                     paddingRight: '16px',
                     fontWeight: 'bold',
                 }}
@@ -80,7 +83,7 @@ const Electronic = (props) => {
                     style={{
                         color: 'rgba(46, 46, 46, 1)',
                         fontWeight: 'bold',
-                        fontSize: '23px',
+                        fontSize: '22px',
                     }}
                 >
                     {header}
@@ -100,7 +103,6 @@ const Electronic = (props) => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    marginBottom: '20px',
                 }}
             >
                 <img src={img} alt="" style={{ scale: '0.7' }} />

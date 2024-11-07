@@ -15,11 +15,6 @@ const TodaysOffer = () => {
     const [selectedPhoto, setSelectedPhoto] = useState(ref1);
     const targetDate = new Date('2024-12-31T00:00:00');
 
-    const getImageStyle = (ref) => ({
-        // filter: selectedPhoto === ref ? 'none' : 'grayscale(100%)',
-        transition: 'filter 0.3s ease',
-    });
-
     const images = [
         { ref: ref1, src: Picture },
         { ref: ref2, src: Picture1 },
@@ -29,42 +24,47 @@ const TodaysOffer = () => {
     return (
         <>
             <div className="TodaysOffer">
-                <ul className="Choice">
-                    <ArrowL
-                        direction="up"
-                        style={{ position: 'absolute', top: -10, zIndex: 100 }}
-                    />
-                    {images.map((image, index) => (
-                        <li
-                            key={index}
-                            ref={image.ref}
-                            onClick={() => setSelectedPhoto(image.ref)}
-                            className={`cursor-pointer transition-all duration-300 hover:opacity-80 ${
-                                selectedPhoto === image.ref
-                                    ? 'active border-2 border-blue-500'
-                                    : ''
-                            }`}
-                        >
-                            <div
-                                className={`blackifseclected ${
+                <div>
+                    <ul className="Choice">
+                        <ArrowL
+                            direction="up"
+                            style={{
+                                position: 'absolute',
+                                top: -10,
+                                zIndex: 100,
+                            }}
+                        />
+                        {images.map((image, index) => (
+                            <li
+                                key={index}
+                                ref={image.ref}
+                                onClick={() => setSelectedPhoto(image.ref)}
+                                className={`cursor-pointer transition-all duration-300 hover:opacity-80 ${
                                     selectedPhoto === image.ref
-                                        ? 'bg-black opacity-25'
+                                        ? 'active border-2 border-blue-500'
                                         : ''
                                 }`}
-                            ></div>
-                            <img
-                                src={image.src}
-                                alt={`Picture ${index + 1}`}
-                                style={getImageStyle(image.ref)}
-                                className="w-full h-full object-cover"
-                            />
-                        </li>
-                    ))}
-                    <ArrowL
-                        direction="down"
-                        style={{ position: 'absolute', bottom: -10 }}
-                    />
-                </ul>
+                            >
+                                <div
+                                    className={`blackifseclected ${
+                                        selectedPhoto === image.ref
+                                            ? 'bg-black opacity-25'
+                                            : ''
+                                    }`}
+                                ></div>
+                                <img
+                                    src={image.src}
+                                    alt={`Picture ${index + 1}`}
+                                    className="w-full h-full object-cover"
+                                />
+                            </li>
+                        ))}
+                        <ArrowL
+                            direction="down"
+                            style={{ position: 'absolute', bottom: -10 }}
+                        />
+                    </ul>
+                </div>
                 <div className="SelectedPhoto">
                     <div className="img">
                         <img

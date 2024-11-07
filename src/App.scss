@@ -5,6 +5,7 @@
     margin: 0;
 }
 
+//TODO: Done 
 .uppbanner {
     background-color: rgba(78, 9, 93, 1);
     height: 50px !important;
@@ -12,6 +13,7 @@
     align-items: center;
 
     .wrapper {
+
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -48,6 +50,8 @@
     }
 }
 
+//TODO: Done 
+
 .navbar {
     background-color: rgba(245, 245, 245, 1);
     height: 140px;
@@ -64,6 +68,7 @@
         }
 
         .links {
+
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -75,6 +80,10 @@
             span {
                 cursor: pointer;
                 transition: 0.3s;
+
+                &.active {
+                    color: rgba(255, 128, 0, 1);
+                }
 
                 color: rgba(77, 75, 75, 1);
 
@@ -103,11 +112,12 @@
                 padding: 10px 0;
                 width: 200px;
                 transition: 0.3s;
-                font-size: 14px;
+                font-size: 12px;
                 border-radius: 40px;
+                background-color: rgb(245, 245, 245);
                 border: 1px solid rgba(114, 114, 114, 1);
                 width: 435px;
-                height: 52px;
+                height: 40px;
                 padding: 18px;
 
                 &::placeholder {
@@ -148,6 +158,8 @@
         }
     }
 }
+
+//TODO: Done 
 
 .landing {
     position: relative;
@@ -210,6 +222,8 @@
     }
 }
 
+//TODO: Done 
+
 .offers {
     position: relative;
     padding-top: 390px;
@@ -244,6 +258,8 @@
     }
 }
 
+//TODO: Done 
+
 .arrow {
     width: 32px;
     height: 32px;
@@ -256,24 +272,26 @@
     cursor: pointer;
 }
 
+//TODO: Done 
+
 .sponsors {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 70px;
+    gap: 60px;
 
     .wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 125px;
+        gap: 135px;
 
         .sponsor {
             img {
-                width: 50px;
-                height: 50px;
+                width: 65px;
+                height: 65px;
             }
 
             display: flex;
@@ -290,19 +308,22 @@
     }
 }
 
+//TODO: Done 
+
 .items-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+
+    gap: 50px;
 
     .productsList {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 23px;
 
         div.item {
             p {
@@ -320,8 +341,8 @@
 
                 position:
                     relative;
-                width: 250px !important;
-                height: 250px;
+                width: 270px !important;
+                height: 270px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -366,7 +387,7 @@
                 }
 
                 img {
-                    scale: 0.8;
+                    scale: 0.85;
                     width: 215px;
                     height: 215px;
                     background-color: rgba(245, 245, 245, 1);
@@ -415,6 +436,8 @@
     }
 }
 
+//TODO: Done 
+
 .NewArrival {
     margin-top: 100px;
     margin-bottom: 173px;
@@ -422,7 +445,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
 
     .ItemsTitle {
         font-size: 40px;
@@ -430,8 +453,10 @@
     }
 }
 
+//TODO: Done 
+
 .TodaysOffer {
-    scale: .92;
+    scale: .995;
 
 
     img {
@@ -444,17 +469,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 
     ul.Choice {
-        padding: 0;
+        scale: .95;
         list-style-type: none;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
 
         li {
             position: relative;
@@ -472,7 +497,6 @@
     }
 
     .SelectedPhoto {
-
         .img {
             position: relative;
         }
@@ -482,8 +506,8 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
-        width: 1500px !important;
-        height: 695px;
+        width: 100% !important;
+        height: 648.6px;
         background-color: rgba(245, 245, 245, 1);
 
         padding: 20px;
@@ -491,6 +515,7 @@
         .img {
             width: 500px !important;
             height: 500px !important;
+            scale: .9;
 
             img {
                 width: 500px;
@@ -499,7 +524,7 @@
         }
 
         div.text {
-
+            scale: .9;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -600,6 +625,8 @@
     }
 }
 
+//TODO: Done 
+
 .img .dno {
     position: absolute;
     top: 5px;
@@ -639,14 +666,14 @@
 }
 
 div.electronics-grid {
-    scale: .95;
+    scale: .989;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 22px;
-    padding: 20px;
+    margin-top: 100px;
 
     div.right {
         width: 75%;
@@ -703,11 +730,23 @@ div.electronics-grid {
                 height: 250px;
                 flex-direction: column !important;
 
+                .text {
+                    padding-bottom: 150px !important;
+                }
+
                 .img {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: start;
+                    justify-content: start;
                     align-self: flex-end;
+                    position: absolute;
+                    top: 70px;
 
                     img {
-                        scale: .8;
+                        z-index: 10;
+                        justify-self: flex-start;
+                        scale: .8 !important;
                     }
                 }
             }
@@ -727,11 +766,16 @@ div.electronics-grid {
         display: flex;
         flex-direction: column !important;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between !important;
         gap: 30px;
 
         .img {
             margin-bottom: 50px !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
 
         img {
@@ -767,12 +811,12 @@ div.Item {
         padding-right: 10px;
 
         p.store-name {
-            font-size: 14px;
+            font-size: 12px;
             color: rgba(255, 128, 0, 1);
         }
 
         h3.product-name {
-            font-size: 20px;
+            font-size: 18px;
             color: rgba(46, 46, 46, 1);
             font-weight: 700;
         }
@@ -781,18 +825,18 @@ div.Item {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            // justify-content: space-around;
             gap: 7px;
 
             span.new-price {
                 color: rgba(13, 122, 92, 1);
                 font-weight: 700;
-                font-size: 20px;
+                font-size: 16px;
             }
 
             span.old-price {
                 color: rgba(114, 114, 114, 1);
-                font-size: 16px;
+                font-size: 14px;
                 text-decoration: line-through;
             }
         }
@@ -806,13 +850,13 @@ div.category-header {
     justify-content: space-between !important;
     margin-bottom: 20px;
     width: 335px;
+    padding: 10px;
     border-bottom: 1px solid rgba(214, 214, 214, 1);
 
     p.header-name {
         color: rgba(46, 46, 46, 1);
-        font-size: 28px;
+        font-size: 25px;
         font-weight: 700;
-
     }
 
     div.buttons {
@@ -849,12 +893,11 @@ div.category-header {
 
 .CategoryWrapper {
     margin-top: 100px;
-    scale: .95;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
 
     .category-wrapper {
@@ -876,6 +919,7 @@ div.category-header {
 
 div.WeekendOffer {
     margin-top: 250px;
+    margin-bottom: 100px;
     height: 365px;
     background-color: #fbf1fe;
     width: 100%;
@@ -906,13 +950,13 @@ div.WeekendOffer {
             gap: 10px;
 
             .title-name {
-                font-size: 20px;
+                font-size: 35px;
                 color: rgba(46, 46, 46, 1);
                 font-weight: 700;
             }
 
             .sub-title {
-                font-size: 20px;
+                font-size: 35px;
                 color: rgba(46, 46, 46, 1);
             }
         }
@@ -932,14 +976,365 @@ div.WeekendOffer {
         }
 
         .last {
+            color: rgba(69, 69, 69, 1);
             font-size: 16px;
+            text-decoration: underline;
         }
     }
 
     div.img {
+        align-self: self-end;
 
         img {
             scale: .9;
+        }
+    }
+}
+
+.OurPartners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    img {
+        scale: .7;
+    }
+}
+
+.Newsletter {
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    div.NewsText {
+        scale: .95;
+        width: 385px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 15px;
+
+        p.header-name {
+            font-size: 40px;
+            color: rgba(46, 46, 46, 1);
+            font-weight: 700;
+        }
+
+        p.desc {
+            font-size: 16px;
+            color: rgba(114, 114, 114, 1);
+        }
+
+        div.input {
+            position: relative;
+
+            input.email-input {
+                outline: none;
+                border: none;
+                width: 420px;
+                height: 35px;
+                padding-right: 30px;
+                font-size: 14px;
+                color: rgba(114, 114, 114, 1);
+                background-color: rgba(245, 245, 245, 1);
+                font-weight: 400;
+            }
+        }
+    }
+
+    div.NewsPicturs {
+        scale: .9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        div.Top {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            img {
+                width: 250px !important;
+                height: 200px !important;
+            }
+        }
+
+        div.Bottom {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            img {
+                width: 250px !important;
+                height: 200px !important;
+            }
+        }
+    }
+}
+
+.Features {
+    background-color: rgb(254, 250, 255);
+
+    .wrapper {
+        padding: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    div.Feature {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        div.img {
+            scale: .8;
+
+            img {}
+        }
+
+        div.text {
+            font-size: 14px;
+
+            p.title {
+                font-weight: 700;
+            }
+
+            p.desc {
+                color: rgba(114, 114, 114, 1);
+            }
+        }
+    }
+}
+
+.Footer {
+    background-color: rgba(78, 9, 93, 1);
+    background-image: url('./assets/texture.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .FooterUp {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        div.left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 30px;
+
+            p.title {
+                font-size: 20px;
+                color: rgba(255, 255, 255, 1);
+                font-weight: 700;
+            }
+
+            div.links {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 18px;
+
+                p {
+                    font-size: 16px;
+                    color: rgba(225, 222, 222, 1);
+                    font-weight: 400;
+                }
+            }
+        }
+
+        div.right {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 30px;
+
+            div.text {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 20px;
+
+                p.title {
+                    font-size: 20px;
+                    color: rgba(255, 255, 255, 1);
+                    font-weight: 700;
+                }
+
+                p.desc {
+                    font-size: 16px;
+                    color: rgba(207, 207, 207, 1);
+                    font-weight: 400;
+                }
+            }
+
+            div.icons {
+                color: rgba(255, 255, 255, 1);
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 10px;
+
+                div.location {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+
+                    p.location-name {
+
+                        font-size: 16px;
+                    }
+
+                }
+
+                div.phone {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+
+                    div.numbers {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: center;
+                        gap: 5px;
+
+                        p {
+                            direction: ltr !important;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        div.center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            div.box {
+                width: 668px;
+                height: 250px;
+                border: 1px solid rgba(137, 137, 137, 1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                div.logo {
+
+                    img {}
+                }
+
+                div.social {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    div.text {
+                        color: rgba(255, 255, 255, 1);
+                    }
+
+                    div.icons {
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgba(255, 255, 255, 1);
+                        gap: 20px !important;
+                    }
+                }
+
+                div.links {
+                    border-top: 1px solid rgb(137, 137, 137);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    padding-top: 10px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+
+                    p {
+                        cursor: pointer;
+                        color: rgba(207, 207, 207, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    div.FooterDown {
+        border-top: 1px solid rgba(114, 114, 114, 1);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+        div.copyright {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(207, 207, 207, 1);
+        }
+
+        div.pay {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            img {}
         }
     }
 }

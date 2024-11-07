@@ -36,7 +36,7 @@ const ElectronicsGrid = () => {
                         header="أدوات التصوير"
                         titleColor="rgba(46, 160, 127, 1)"
                         bgcolor="rgba(225, 248, 225, 1)"
-                        imgPos="corner"
+                        // imgPos="corner"
                         className="fourth"
                     />{' '}
                     <Electronic
