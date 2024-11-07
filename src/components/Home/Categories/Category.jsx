@@ -4,6 +4,7 @@ import CategoryHeader from './CategoryHeader';
 const Category = (props) => {
     const { headerName, productsList } = props;
     const { productOne, productTwo, productThree } = productsList;
+
     return (
         <div className="category-wrapper">
             <CategoryHeader headerName={headerName} />

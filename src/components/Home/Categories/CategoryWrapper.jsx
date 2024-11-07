@@ -31,6 +31,27 @@ const CategoryWrapper = () => {
             price: '16.00 ر.س',
             oldPrice: '19.00 ر.س',
         },
+        productFour: {
+            img: C1P1,
+            storeName: 'موديفا ستور',
+            productName: 'جاكيت بامبي نسائي',
+            price: '17.00 ر.س',
+            oldPrice: '21.00 ر.س',
+        },
+        productFive: {
+            img: C1P2,
+            storeName: 'فاكتور ستور',
+            productName: 'جاكيت بامبي رجالي',
+            price: '18.00 ر.س',
+            oldPrice: '20.00 ر.س',
+        },
+        productSix: {
+            img: C1P3,
+            storeName: 'النصر الرياضي',
+            productName: 'حذاء رياضي',
+            price: '16.00 ر.س',
+            oldPrice: '19.00 ر.س',
+        },
     };
 
     const productListTwo = {
@@ -55,6 +76,27 @@ const CategoryWrapper = () => {
             price: '16.00 ر.س',
             oldPrice: '20.00 ر.س',
         },
+        productFour: {
+            img: C1P1,
+            storeName: 'موديفا ستور',
+            productName: 'جاكيت بامبي نسائي',
+            price: '17.00 ر.س',
+            oldPrice: '21.00 ر.س',
+        },
+        productFive: {
+            img: C1P2,
+            storeName: 'فاكتور ستور',
+            productName: 'جاكيت بامبي رجالي',
+            price: '18.00 ر.س',
+            oldPrice: '20.00 ر.س',
+        },
+        productSix: {
+            img: C1P3,
+            storeName: 'النصر الرياضي',
+            productName: 'حذاء رياضي',
+            price: '16.00 ر.س',
+            oldPrice: '19.00 ر.س',
+        },
     };
 
     const productListThree = {
@@ -78,6 +120,27 @@ const CategoryWrapper = () => {
             productName: 'طاولة جانوس الخشبية',
             price: '28.00 ر.س',
             oldPrice: '32.00 ر.س',
+        },
+        productFour: {
+            img: C1P1,
+            storeName: 'موديفا ستور',
+            productName: 'جاكيت بامبي نسائي',
+            price: '17.00 ر.س',
+            oldPrice: '21.00 ر.س',
+        },
+        productFive: {
+            img: C1P2,
+            storeName: 'فاكتور ستور',
+            productName: 'جاكيت بامبي رجالي',
+            price: '18.00 ر.س',
+            oldPrice: '20.00 ر.س',
+        },
+        productSix: {
+            img: C1P3,
+            storeName: 'النصر الرياضي',
+            productName: 'حذاء رياضي',
+            price: '16.00 ر.س',
+            oldPrice: '19.00 ر.س',
         },
     };
     return (

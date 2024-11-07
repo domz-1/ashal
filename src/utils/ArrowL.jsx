@@ -7,6 +7,7 @@ const ArrowL = ({
     style = {},
     size = 24,
     color = 'currentColor',
+    onClick = () => {},
 }) => {
     const getRotation = () => {
         switch (direction) {
@@ -31,6 +32,7 @@ const ArrowL = ({
                 ...style,
             }}
             data-direction={direction}
+            onClick={onClick}
         >
             <MdOutlineKeyboardArrowLeft
                 size={size}
