@@ -1,36 +1,44 @@
-import React from 'react';
+import { useState } from 'react';
 import { Button, Rating, IconButton } from '@mui/material';
 import { CiHeart } from 'react-icons/ci';
+import { FaRegHeart } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import { TbArrowsLeftRight } from 'react-icons/tb';
 import CountdownTimer from '../../../utils/CountdownTimer';
 
 const SelectedProduct = ({ product }) => {
+    const [isFavorite, setIsFavorite] = useState(false);
+    const [isAdded, setIsAdded] = useState(false);
+    const [rate, setRate] = useState(product.rating || 0);
+
     return (
         <div className="SelectedPhoto">
             <div className="img">
-                <img
-                    src={product.src}
-                    alt="Selected"
-                    className=""
-                />
+                <img src={product.src} alt="Selected" className="" />
                 <div className="dno">
                     <div className="offer">{product.discount}% Off</div>
                     <div className="description">New</div>
                 </div>
             </div>
             <div className="text">
-                <p className="Offer">Today's Offer</p>
+                <p className="Offer">عرض اليوم</p>
                 <p className="OfferName">{product.name}</p>
-                <p className="OfferDate">
-                </p>
+                <p className="OfferDate"></p>
                 <span className="rating">
-                    <Rating value={product.rating} />
-                    <p>{product.reviews} reviews</p>
+                    <Rating
+                        value={rate} // Updated to use `rate`
+                        sx={{ direction: 'rtl' }}
+                        onChange={(e, newValue) => setRate(newValue)}
+                    />
+                    <p>{product.reviews} استعراض</p>
                 </span>
                 <p className="offerDesc">{product.description}</p>
                 <div className="offerPrice">
-                    <div className="price">${product.price.toFixed(2)}</div>
-                    <div className="OldPrice">${product.oldPrice.toFixed(2)}</div>
+                    <div className="price">{product.price.toFixed(2)} ر.س </div>{' '}
+                    &nbsp;&nbsp;
+                    <div className="OldPrice">
+                        {product.oldPrice.toFixed(2)} ر.س
+                    </div>
                 </div>
                 <CountdownTimer targetDate={product.date} />
 
@@ -45,7 +53,7 @@ const SelectedProduct = ({ product }) => {
                             boxShadow: 'none',
                         }}
                     >
-                        Add to Cart
+                        أضف إلى السلة
                     </Button>
                     <IconButton
                         variant="contained"
@@ -59,8 +67,15 @@ const SelectedProduct = ({ product }) => {
                             border: '1px solid rgba(214, 214, 214, 1)',
                             p: '0px',
                         }}
+                        onClick={() => {
+                            setIsFavorite(!isFavorite);
+                        }}
                     >
-                        <CiHeart size={30} />
+                        {isFavorite ? (
+                            <FaHeart style={{ color: 'red' }} />
+                        ) : (
+                            <FaRegHeart />
+                        )}
                     </IconButton>
                     <IconButton
                         variant="contained"
@@ -83,4 +98,4 @@ const SelectedProduct = ({ product }) => {
     );
 };
 
-export default SelectedProduct; 
+export default SelectedProduct;

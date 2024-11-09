@@ -1,7 +1,8 @@
 import { GoPerson } from 'react-icons/go';
-import { CiHeart } from 'react-icons/ci';
+import { LuHeart } from 'react-icons/lu';
 import { HiOutlineArchiveBox } from 'react-icons/hi2';
 import Typography from '@mui/material/Typography';
+import { CgBox } from 'react-icons/cg';
 const NavIcons = () => {
     return (
         <div className="icons">
@@ -9,10 +10,10 @@ const NavIcons = () => {
                 EN
             </Typography>
             <div className="cart">
-                <HiOutlineArchiveBox size={20} />
+                <CgBox size={20} />
                 <div className="count">2</div>
             </div>
-            <CiHeart size={20} />
+            <LuHeart size={20} />
             <GoPerson size={20} />
         </div>
     );

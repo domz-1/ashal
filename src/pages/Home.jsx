@@ -13,8 +13,10 @@ import MostCell from './../components/Home/MostCellOld/MostCell';
 import OurPartners from './../components/Home/OurPartners/OurPartners';
 import Newsletter from './../components/Home/Newsletter/Newsletter';
 import Features from '../components/Home/Features/Features';
-
 import Footer from '../components/Home/Footer/Footer';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
+
 const Home = () => {
     return (
         <div className="home">

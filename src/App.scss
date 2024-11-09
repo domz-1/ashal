@@ -176,8 +176,7 @@
 
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.5);
-            /* Semi-transparent background */
+            background-color: black !important;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -185,12 +184,17 @@
         }
 
         .carousel-control-prev {
-            left: 10px;
-            top: 400px;
+            z-index: 70;
+            color: transparent;
+            right: 20px;
+            top: 320px;
         }
 
         .carousel-control-next {
-            right: 10px;
+            z-index: 70;
+            right: -10px;
+            top: 320px;
+            color: transparent;
         }
 
         .carousel-caption {
@@ -212,9 +216,13 @@
     .shop {
         position: absolute;
         top: -80px;
-        left: -60px;
-        z-index: 50;
+        left: -600px;
+        z-index: 500;
         scale: 0.8;
+
+        img {
+            z-index: 50;
+        }
     }
 
     .text {
@@ -274,60 +282,57 @@
 
 //TODO: Done 
 .sponsors {
+    // direction: ltr !important;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 60px;
+    // width: 1000px;
 
-    .wrapper {
+    .marquee-wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 135px;
 
-        .sponsor {
-            img {
-                width: 65px;
-                height: 65px;
-            }
 
+        .wrapper {
+            direction: ltr !important;
+            width: 1150px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
-            gap: 6px;
 
-            .sponsor-name {
-                font-size: 16px;
-                color: rgba(114, 114, 114, 1);
+            .sponsor {
+                direction: ltr !important;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                margin: 0 50px;
+
+                img {
+                    width: 65px;
+                    height: 65px;
+                }
+
+                .sponsor-name {
+                    font-size: 16px;
+                    color: rgba(114, 114, 114, 1);
+                }
             }
         }
     }
 }
 
 
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
 
-    100% {
-        transform: translateX(-50%);
-    }
-}
+
 
 
 //TODO: Done 
@@ -553,9 +558,14 @@
             justify-content: center;
 
             span.rating {
+                direction: rtl !important;
                 margin-bottom: 15px;
                 display: flex;
                 flex-direction: row;
+
+                .MuiRating-root {
+                    direction: ltr !important;
+                }
 
                 p {
                     color: rgba(114, 114, 114, 1);
@@ -889,7 +899,9 @@ div.category-header {
         font-size: 16px;
         gap: 5px;
 
-        div.button-left {
+        button.button-left {
+            background-color: #fff;
+            border: none;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -900,7 +912,9 @@ div.category-header {
             border: 1px solid rgba(214, 214, 214, 1);
         }
 
-        div.button-right {
+        button.button-right {
+            background-color: #fff;
+            border: none;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -1014,6 +1028,7 @@ div.WeekendOffer {
 }
 
 .OurPartners {
+    direction: ltr !important;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1365,75 +1380,4 @@ div.WeekendOffer {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-
-
-.stock-ticker {
-    font-size: 15px;
-    padding-block: 8px;
-    border-block: 1px solid;
-    overflow: hidden;
-    user-select: none;
-
-    --gap: 20px;
-    display: flex;
-    gap: var(--gap);
-}
-
-.stock-ticker ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--gap);
-
-    animation: scroll 20s linear infinite;
-}
-
-.stock-ticker:hover ul {
-    animation-play-state: paused;
-}
-
-@keyframes scroll {
-    to {
-        transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-
-.stock-ticker ul:first-child {
-    /* background-color: yellow; */
-}
-
-.stock-ticker ul:last-child {
-    /* background-color: pink; */
-}
-
-.stock-ticker .company,
-.stock-ticker .price {
-    font-weight: bold;
-}
-
-.stock-ticker .price {
-    margin-inline: 4px;
-}
-
-.stock-ticker .plus::before {
-    content: "↑";
-}
-
-.stock-ticker .minus::before {
-    content: "↓";
-}
-
-.stock-ticker .plus .change,
-.stock-ticker .plus::before {
-    color: #089981;
-}
-
-.stock-ticker .minus .change,
-.stock-ticker .minus::before {
-    color: #f23645;
 }
