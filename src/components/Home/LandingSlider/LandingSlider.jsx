@@ -104,7 +104,7 @@ const LandingSlider = () => {
                 <Carousel
                     className="carousel slide"
                     controls={true}
-                    indicators={true}
+                    indicators={false}
                     prevIcon={<FaArrowLeftLong className="custom-arrow left" />}
                     nextIcon={
                         <FaArrowRightLong className="custom-arrow right" />
