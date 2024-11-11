@@ -77,6 +77,10 @@
             font-size: 16px;
             font-weight: 700;
 
+            p {
+                cursor: pointer;
+            }
+
             span {
                 cursor: pointer;
                 transition: 0.3s;
@@ -164,6 +168,12 @@
 .landing {
     position: relative;
 
+    .carousel-inner {
+        overflow: visible !important;
+    }
+
+
+
     .carousel {
         position: absolute;
         top: -50px;
@@ -171,6 +181,8 @@
         z-index: 3;
         max-width: 1440px;
         max-height: 461px;
+
+
 
 
 
@@ -210,23 +222,33 @@
             align-items: center;
             justify-content: center;
             color: white;
+            overflow-y: visible !important;
+
         }
     }
 
     .shop {
         position: absolute;
         top: -80px;
-        left: -600px;
+        left: -608px;
         z-index: 500;
         scale: 0.8;
+        overflow-y: visible !important;
+
+
+
 
         img {
             z-index: 50;
+            overflow-y: visible !important;
+
         }
     }
 
     .text {
         color: black;
+        overflow-y: visible !important;
+
     }
 }
 
@@ -1069,7 +1091,7 @@ div.WeekendOffer {
             color: rgba(114, 114, 114, 1);
         }
 
-        div.input {
+        form.input {
             position: relative;
 
             input.email-input {
@@ -1082,6 +1104,7 @@ div.WeekendOffer {
                 color: rgba(114, 114, 114, 1);
                 background-color: rgba(245, 245, 245, 1);
                 font-weight: 400;
+                margin-bottom: 15px;
             }
         }
     }

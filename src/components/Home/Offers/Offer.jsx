@@ -22,8 +22,12 @@ const offer = (props) => {
                     {description}
                 </Typography>
                 <Typography
-                    variant="body1"
-                    sx={{ textDecoration: 'underline', fontSize: '14px' }}
+                    variant="body1 "
+                    sx={{
+                        textDecoration: 'underline',
+                        fontSize: '14px',
+                        cursor: 'pointer',
+                    }}
                 >
                     عرض الآن
                 </Typography>

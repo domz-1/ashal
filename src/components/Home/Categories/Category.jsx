@@ -60,7 +60,7 @@ const Category = ({ headerName, productsList = {} }) => {
                         storeName={product.storeName}
                         productName={product.productName}
                         price={product.price}
-                        oldPrice={product.oldPrice}
+                        OldPrice={product.oldPrice}
                     />
                 ))}
             </div>

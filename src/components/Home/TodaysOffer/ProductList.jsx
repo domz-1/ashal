@@ -1,12 +1,17 @@
 import React from 'react';
 import ArrowL from '../../../utils/ArrowL';
-import { products } from './products';
+import { productsToday } from './TodaysOffer';
 
-const ProductList = ({ currentIndex, handlePrevProduct, handleNextProduct, handleImageClick }) => {
+const ProductList = ({
+    currentIndex,
+    handlePrevProduct,
+    handleNextProduct,
+    handleImageClick,
+}) => {
     const visibleProducts = [
-        products[currentIndex],
-        products[(currentIndex + 1) % products.length],
-        products[(currentIndex + 2) % products.length],
+        productsToday[currentIndex],
+        productsToday[(currentIndex + 1) % productsToday.length],
+        productsToday[(currentIndex + 2) % productsToday.length],
     ];
 
     return (
@@ -24,11 +29,16 @@ const ProductList = ({ currentIndex, handlePrevProduct, handleNextProduct, handl
             {visibleProducts.map((product, index) => (
                 <li
                     key={index}
-                    className={`cursor-pointer transition-all duration-300 hover:opacity-80 ${
+                    className={`cursor-pointer transition-all duration-300 hover:opacity-80 position-relative ${
                         index === 0 ? 'active border-2 border-blue-500' : ''
                     }`}
-                    onClick={() => handleImageClick((currentIndex + index) % products.length)}
+                    onClick={() =>
+                        handleImageClick(
+                            (currentIndex + index) % productsToday.length
+                        )
+                    }
                 >
+                    <div className={`blackifseclected`}></div>
                     <img
                         src={product.src}
                         className="w-full h-full object-cover"
@@ -40,7 +50,8 @@ const ProductList = ({ currentIndex, handlePrevProduct, handleNextProduct, handl
                 style={{
                     position: 'absolute',
                     bottom: -10,
-                    opacity: currentIndex === products.length - 1 ? 0.5 : 1,
+                    opacity:
+                        currentIndex === productsToday.length - 1 ? 0.5 : 1,
                 }}
                 onClick={handleNextProduct}
             />
@@ -48,4 +59,4 @@ const ProductList = ({ currentIndex, handlePrevProduct, handleNextProduct, handl
     );
 };
 
-export default ProductList; 
+export default ProductList;

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button, Rating, IconButton } from '@mui/material';
-import { CiHeart } from 'react-icons/ci';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { TbArrowsLeftRight } from 'react-icons/tb';
@@ -8,7 +7,6 @@ import CountdownTimer from '../../../utils/CountdownTimer';
 
 const SelectedProduct = ({ product }) => {
     const [isFavorite, setIsFavorite] = useState(false);
-    const [isAdded, setIsAdded] = useState(false);
     const [rate, setRate] = useState(product.rating || 0);
 
     return (
@@ -17,7 +15,7 @@ const SelectedProduct = ({ product }) => {
                 <img src={product.src} alt="Selected" className="" />
                 <div className="dno">
                     <div className="offer">{product.discount}% Off</div>
-                    <div className="description">New</div>
+                    <div className="description">{product.isOffer}</div>
                 </div>
             </div>
             <div className="text">

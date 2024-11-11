@@ -1,29 +1,36 @@
 import { useState } from 'react';
 import ProductList from './ProductList';
 import SelectedProduct from './SelectedProduct';
-import { products } from './products';
+import { productsToday } from './TodaysOffer';
 
 const TodaysOffer = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [selectedProduct, setSelectedProduct] = useState(products[0]);
+    const [selectedProduct, setSelectedProduct] = useState(productsToday[0]);
 
     const handlePrevProduct = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? products.length - 1 : prevIndex - 1
+            prevIndex === 0 ? productsToday.length - 1 : prevIndex - 1
         );
-        setSelectedProduct(products[(currentIndex - 1 + products.length) % products.length]);
+        setSelectedProduct(
+            productsToday[
+                (currentIndex - 1 + productsToday.length) % productsToday.length
+            ]
+        );
     };
 
     const handleNextProduct = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === products.length - 1 ? 0 : prevIndex + 1
+            prevIndex === productsToday.length - 1 ? 0 : prevIndex + 1
         );
-        setSelectedProduct(products[(currentIndex + 1) % products.length]);
+        setSelectedProduct(
+            productsToday[(currentIndex + 1) % productsToday.length]
+        );
     };
 
     const handleImageClick = (index) => {
+        console.log('Clicked on image:', index);
         setCurrentIndex(index);
-        setSelectedProduct(products[index]);
+        setSelectedProduct(productsToday[index]);
     };
 
     return (

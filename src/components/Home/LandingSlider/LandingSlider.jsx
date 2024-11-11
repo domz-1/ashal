@@ -100,100 +100,110 @@ import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6';
 const LandingSlider = () => {
     return (
         <div className="landing">
-            <Container>
-                <Carousel
-                    className="carousel slide"
-                    controls={true}
-                    indicators={false}
-                    prevIcon={<FaArrowLeftLong className="custom-arrow left" />}
-                    nextIcon={
-                        <FaArrowRightLong className="custom-arrow right" />
-                    }
+            <Carousel
+                className="carousel"
+                slide={false}
+                controls={true}
+                indicators={false}
+                prevIcon={<FaArrowLeftLong className="custom-arrow left" />}
+                nextIcon={<FaArrowRightLong className="custom-arrow right" />}
+                style={{ overflow: 'visible' }}
+            >
+                <Carousel.Item
+                    className="carousel-item carousel-inner position-relative"
+                    style={{ overflow: 'visible' }}
                 >
-                    <Carousel.Item className="carousel-item carousel-inner position-relative">
-                        <img
-                            src={Image}
-                            className="d-block w-100"
-                            alt="Landing slide 1"
-                        />
-                        <Carousel.Caption className="d-none d-md-block mb-3 ">
-                            <div className="text mb-3">
-                                <h1
-                                    className="display-4 fw-bold"
-                                    style={{ fontSize: '48px' }}
-                                >
-                                    <span
-                                        style={{
-                                            color: 'rgba(116, 13, 139, 1)',
-                                        }}
-                                    >
-                                        أسهل،
-                                    </span>
-                                    خلّى التسوق أسهل، قارن، اختر، وادفع بأفضل
-                                    الأسعار
-                                </h1>
-                                <p
+                    <img
+                        src={Image}
+                        className="d-block w-100"
+                        alt="Landing slide 1"
+                    />
+                    <Carousel.Caption
+                        className="d-none d-md-block mb-3 "
+                        style={{ overflow: 'visible' }}
+                    >
+                        <div
+                            className="text mb-3"
+                            style={{ overflow: 'visible' }}
+                        >
+                            <h1
+                                className="display-4 fw-bold lh-base"
+                                style={{
+                                    fontSize: '48px',
+                                    lineHeight: '60px',
+                                }}
+                            >
+                                <span
                                     style={{
-                                        fontSize: '16px',
-                                        color: 'rgba(114, 114, 114, 1)',
+                                        color: 'rgba(116, 13, 139, 1)',
                                     }}
                                 >
-                                    <img
-                                        src={Shop}
-                                        alt="Shop Icon"
-                                        className="shop"
-                                    />
-                                    استمتع بتجربة تسوق سلسة مع إمكانية مقارنة
-                                    المنتجات المتطابقة من <br />
-                                    عدة بائعين. اكتشف الأسعار والعروض التي
-                                    تناسبك بدون عناء.
-                                </p>
-                            </div>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item className="carousel-item carousel-inner position-relative">
-                        <img
-                            src={Image}
-                            className="d-block w-100"
-                            alt="Landing slide 1"
-                        />
-                        <Carousel.Caption className="d-none d-md-block mb-3 ">
-                            <div className="text mb-3">
-                                <h1
-                                    className="display-4 fw-bold"
-                                    style={{ fontSize: '48px' }}
-                                >
-                                    <span
-                                        style={{
-                                            color: 'rgba(116, 13, 139, 1)',
-                                        }}
-                                    >
-                                        أسهل،
-                                    </span>
-                                    خلّى التسوق أسهل، قارن، اختر، وادفع بأفضل
-                                    الأسعار
-                                </h1>
-                                <p
+                                    أسهل،
+                                </span>
+                                خلّى التسوق أسهل، قارن، اختر، وادفع بأفضل
+                                الأسعار
+                            </h1>
+                            <p
+                                style={{
+                                    fontSize: '16px',
+                                    color: 'rgba(114, 114, 114, 1)',
+                                }}
+                            >
+                                <img
+                                    src={Shop}
+                                    alt="Shop Icon"
+                                    className="shop"
+                                />
+                                استمتع بتجربة تسوق سلسة مع إمكانية مقارنة
+                                المنتجات المتطابقة من <br />
+                                عدة بائعين. اكتشف الأسعار والعروض التي تناسبك
+                                بدون عناء.
+                            </p>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="carousel-item carousel-inner position-relative">
+                    <img
+                        src={Image}
+                        className="d-block w-100"
+                        alt="Landing slide 1"
+                    />
+                    <Carousel.Caption className="d-none d-md-block mb-3 ">
+                        <div className="text mb-3">
+                            <h1
+                                className="display-4 fw-bold lh-base"
+                                style={{ fontSize: '48px' }}
+                            >
+                                <span
                                     style={{
-                                        fontSize: '16px',
-                                        color: 'rgba(114, 114, 114, 1)',
+                                        color: 'rgba(116, 13, 139, 1)',
                                     }}
                                 >
-                                    <img
-                                        src={Shop}
-                                        alt="Shop Icon"
-                                        className="shop"
-                                    />
-                                    استمتع بتجربة تسوق سلسة مع إمكانية مقارنة
-                                    المنتجات المتطابقة من <br />
-                                    عدة بائعين. اكتشف الأسعار والعروض التي
-                                    تناسبك بدون عناء.
-                                </p>
-                            </div>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-            </Container>
+                                    أسهل،
+                                </span>
+                                خلّى التسوق أسهل، قارن، اختر، وادفع بأفضل
+                                الأسعار
+                            </h1>
+                            <p
+                                style={{
+                                    fontSize: '16px',
+                                    color: 'rgba(114, 114, 114, 1)',
+                                }}
+                            >
+                                <img
+                                    src={Shop}
+                                    alt="Shop Icon"
+                                    className="shop"
+                                />
+                                استمتع بتجربة تسوق سلسة مع إمكانية مقارنة
+                                المنتجات المتطابقة من <br />
+                                عدة بائعين. اكتشف الأسعار والعروض التي تناسبك
+                                بدون عناء.
+                            </p>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
         </div>
     );
 };

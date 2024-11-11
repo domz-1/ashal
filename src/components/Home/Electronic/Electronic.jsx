@@ -92,6 +92,7 @@ const Electronic = (props) => {
                     style={{
                         textDecoration: 'underline',
                         color: 'rgba(69, 69, 69, 1)',
+                        cursor: 'pointer',
                     }}
                 >
                     تسوق الآن

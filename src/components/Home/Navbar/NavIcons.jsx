@@ -6,15 +6,18 @@ import { CgBox } from 'react-icons/cg';
 const NavIcons = () => {
     return (
         <div className="icons">
-            <Typography variant="text16" sx={{ width: 20, height: 20 }}>
+            <Typography
+                variant="text16"
+                sx={{ width: 20, height: 20, cursor: 'pointer' }}
+            >
                 EN
             </Typography>
-            <div className="cart">
-                <CgBox size={20} />
-                <div className="count">2</div>
+            <div className="cart" style={{ cursor: 'pointer' }}>
+                <CgBox size={20} style={{ cursor: 'pointer' }} />
+                <div className="count">1</div>
             </div>
-            <LuHeart size={20} />
-            <GoPerson size={20} />
+            <LuHeart size={20} style={{ cursor: 'pointer' }} />
+            <GoPerson size={20} style={{ cursor: 'pointer' }} />
         </div>
     );
 };

@@ -12,17 +12,26 @@ const ItemsWrapper = () => {
     const itemsPerView = 4;
 
     // Duplicate products to create a seamless loop
-    const duplicatedProducts = [...products, ...products, ...products, ...products];
+    const duplicatedProducts = [
+        ...products,
+        ...products,
+        ...products,
+        ...products,
+    ];
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? duplicatedProducts.length - itemsPerView : prevIndex - itemsPerView
+            prevIndex === 0
+                ? duplicatedProducts.length - itemsPerView
+                : prevIndex - itemsPerView
         );
     };
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex + itemsPerView >= duplicatedProducts.length ? 0 : prevIndex + itemsPerView
+            prevIndex + itemsPerView >= duplicatedProducts.length
+                ? 0
+                : prevIndex + itemsPerView
         );
     };
 
@@ -30,16 +39,22 @@ const ItemsWrapper = () => {
         <div className="items-wrapper">
             <ArrowL direction="right" onClick={handleNext} />
             <div className="productsList">
-                {duplicatedProducts.slice(currentIndex, currentIndex + itemsPerView).map((product, index) => (
-                    <Item
-                        image={product.src} // Assuming product has a src property
-                        cat={product.name} // Assuming category is the product name for this example
-                        title={product.name}
-                        OldPrice={`${product.oldPrice} ر.س`}
-                        price={`${product.price} ر.س`}
-                        isOffer={`${product.discount}% OFF`}
-                    />
-                ))}
+                {duplicatedProducts
+                    .slice(currentIndex, currentIndex + itemsPerView)
+                    .map((product, index) => (
+                        <Item
+                            image={product.src} // Assuming product has a src property
+                            cat={product.category} // Assuming category is the product name for this example
+                            title={product.name}
+                            OldPrice={`${product.oldPrice.toFixed(2)} ر.س`}
+                            price={`${product.price.toFixed(2)} ر.س`}
+                            isOffer={`${
+                                product.discount ? product.discount : ''
+                            }`}
+                            description={product.description}
+                            key={index}
+                        />
+                    ))}
             </div>
             <ArrowL direction="left" onClick={handlePrev} />
         </div>

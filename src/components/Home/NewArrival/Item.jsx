@@ -5,7 +5,24 @@ const Item = (props) => {
             <div className="item-image">
                 <img src={image} alt="" />
                 <div className="dno">
-                    {isOffer && <div className="offer">{isOffer}</div>}
+                    {isOffer && (
+                        <div
+                            className="offer"
+                            style={{
+                                direction: 'rtl',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexDirection: 'row-reverse',
+                                gap: '1px',
+                            }}
+                        >
+                            <p>{`${isOffer && isOffer}%`}</p>
+                            <p style={{ fontSize: '11px' }}>
+                                {isOffer && 'OFF'}&nbsp;
+                            </p>
+                        </div>
+                    )}
                     {description && (
                         <div className="description">{description}</div>
                     )}

@@ -13,7 +13,9 @@ const WeekendOffer = () => {
                     <span className="new-price">200 ر.س</span> &nbsp;
                     <span className="old-price">بدلاُ من 300 ر.س</span>
                 </div>
-                <p className="last">عرض الآن</p>
+                <p className="last" style={{ cursor: 'pointer' }}>
+                    عرض الآن
+                </p>
             </div>
             <div className="img">
                 <img src={Orgoha} alt="" />

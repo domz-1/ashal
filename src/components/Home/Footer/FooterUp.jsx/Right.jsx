@@ -11,15 +11,15 @@ const Right = () => {
                 </p>
             </div>
             <div className="icons">
-                <div className="location">
+                <div className="location" style={{ cursor: 'pointer' }}>
                     <HiOutlineLocationMarker size={24} />
                     <p className="location-name">المملكة العربية السعودية</p>
                 </div>
                 <div className="phone">
                     <PiPhoneCallBold size={24} />
                     <div className="numbers">
-                        <p>(+966) 064 284 118</p>
-                        <p>(+966) 055 626 136</p>
+                        <p style={{ cursor: 'pointer' }}>(+966) 064 284 118</p>
+                        <p style={{ cursor: 'pointer' }}>(+966) 064 279 485</p>
                     </div>
                 </div>
             </div>
