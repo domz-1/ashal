@@ -25,7 +25,7 @@ const Center = () => {
                     </div>
                 </div>
                 <div className="links">
-                    <p>الرئيسية</p>
+                    <p onClick={() => window.scrollTo(0, 0)}>الرئيسية</p>
                     <p>عن أسهل</p>
                     <p>المنتجات</p>
                     <p>التجار</p>

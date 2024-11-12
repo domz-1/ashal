@@ -14,7 +14,7 @@ const Sponsors = () => {
     const [direction, setDirection] = useState('left');
     return (
         <div className="sponsors">
-            <ArrowL direction="right" onClick={() => setDirection('right')} />
+            {/* <ArrowL direction="right" onClick={() => setDirection('right')} /> */}
             <div className="marquee-wrapper">
                 <Marquee
                     direction={direction}
@@ -32,7 +32,7 @@ const Sponsors = () => {
                     <Sponsor image={decore} name="الديكور" />
                 </Marquee>
             </div>
-            <ArrowL direction="left" onClick={() => setDirection('left')} />
+            {/* <ArrowL direction="left" onClick={() => setDirection('left')} /> */}
         </div>
     );
 };

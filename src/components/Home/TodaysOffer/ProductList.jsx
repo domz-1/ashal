@@ -21,7 +21,7 @@ const ProductList = ({
                 style={{
                     position: 'absolute',
                     top: -10,
-                    zIndex: 100,
+                    zIndex: 10000,
                     opacity: currentIndex === 0 ? 0.5 : 1,
                 }}
                 onClick={handlePrevProduct}

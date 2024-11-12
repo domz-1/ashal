@@ -24,11 +24,13 @@ const SelectedProduct = ({ product }) => {
                 <p className="OfferDate"></p>
                 <span className="rating">
                     <Rating
-                        value={rate} // Updated to use `rate`
+                        value={rate}
                         sx={{ direction: 'rtl' }}
                         onChange={(e, newValue) => setRate(newValue)}
                     />
-                    <p>{product.reviews} استعراض</p>
+                    <p style={{ cursor: 'pointer' }}>
+                        {product.reviews} استعراض
+                    </p>
                 </span>
                 <p className="offerDesc">{product.description}</p>
                 <div className="offerPrice">
