@@ -19,7 +19,7 @@ const Item = (props) => {
                         >
                             <p>{`${isOffer && isOffer}%`}</p>
                             <p style={{ fontSize: '11px' }}>
-                                {isOffer && 'OFF'}&nbsp;
+                                {isOffer && 'عرض'}&nbsp;
                             </p>
                         </div>
                     )}

@@ -56,7 +56,7 @@ export const productListOne = {
 export const productListTwo = {
     productOne: {
         img: C2P1,
-        storeName: 'جسيرك ستور',
+        storeName: 'جينيرك ستور',
         productName: 'كوب خزفي عتيق',
         price: '14.00 ر.س',
         oldPrice: '18.00 ر.س',
@@ -77,7 +77,7 @@ export const productListTwo = {
     },
     productFour: {
         img: C2P1,
-        storeName: 'جسيرك ستور',
+        storeName: 'جينيرك ستور',
         productName: ' 01 كوب خزفي عتيق',
         price: '14.00 ر.س',
         oldPrice: '18.00 ر.س',

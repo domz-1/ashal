@@ -29,6 +29,7 @@ const ArrowL = ({
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                cursor: 'pointer',
                 ...style,
             }}
             data-direction={direction}

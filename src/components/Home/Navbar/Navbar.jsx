@@ -9,7 +9,12 @@ const Navbar = () => {
     return (
         <AppBar position="static" className="navbar">
             <Container className="wrapper">
-                <img src={Logo} alt="logo" className="logo" />
+                <img
+                    src={Logo}
+                    alt="logo"
+                    className="logo"
+                    style={{ cursor: 'pointer' }}
+                />
                 <NavLinks />
                 <Search />
                 <NavIcons />

@@ -2,7 +2,6 @@ import Navbar from '../components/Home/Navbar/Navbar';
 import Uppbanner from '../components/Home/Upperbanner/Uppbanner';
 import Offers from '../components/Home/Offers/Offers';
 import NewArrival from '../components/Home/NewArrival/NewArrival';
-import TodaysOffer from '../components/Home/TodaysOffer/TodaysOffer';
 import { Container } from '@mui/material';
 import LandingSlider from '../components/Home/LandingSlider/LandingSlider';
 import Sponsors from '../components/Home/Sponsors/Sponsors';
@@ -16,6 +15,7 @@ import Features from '../components/Home/Features/Features';
 import Footer from '../components/Home/Footer/Footer';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import TodaysOfferC from './../components/Home/TodaysOffer/TodaysOfferC';
 
 const Home = () => {
     return (
@@ -35,7 +35,7 @@ const Home = () => {
                 <NewArrival />
             </Container>
             <Container>
-                <TodaysOffer />
+                <TodaysOfferC />
             </Container>
             <Container>
                 <ElectronicsGrid />

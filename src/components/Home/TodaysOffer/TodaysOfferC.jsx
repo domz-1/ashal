@@ -3,7 +3,7 @@ import ProductList from './ProductList';
 import SelectedProduct from './SelectedProduct';
 import { productsToday } from './TodaysOffer';
 
-const TodaysOffer = () => {
+const TodaysOfferC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedProduct, setSelectedProduct] = useState(productsToday[0]);
 
@@ -46,4 +46,4 @@ const TodaysOffer = () => {
     );
 };
 
-export default TodaysOffer;
+export default TodaysOfferC;

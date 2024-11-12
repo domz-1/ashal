@@ -14,7 +14,7 @@ const SelectedProduct = ({ product }) => {
             <div className="img">
                 <img src={product.src} alt="Selected" className="" />
                 <div className="dno">
-                    <div className="offer">{product.discount}% Off</div>
+                    <div className="offer">عرض {product.discount}%</div>
                     <div className="description">{product.isOffer}</div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ const SelectedProduct = ({ product }) => {
                             boxShadow: 'none',
                         }}
                     >
-                        أضف إلى السلة
+                        إضافة سلة التسوق{' '}
                     </Button>
                     <IconButton
                         variant="contained"

@@ -321,14 +321,16 @@
 
         .wrapper {
             direction: ltr !important;
-            width: 1150px;
+            width: 1140px;
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
+
 
             .sponsor {
+                cursor: pointer;
                 direction: ltr !important;
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -375,6 +377,8 @@
         gap: 23px;
 
         div.item {
+            cursor: pointer;
+
             p {
                 padding: 0 !important;
             }
@@ -531,16 +535,19 @@
         gap: 20px;
 
         li {
-            position: relative;
+            position: relative !important;
             text-decoration: none;
+            cursor: pointer;
 
             .blackifseclected {
+                background-color: #00000049;
                 transition: filter 0.3s ease;
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: 800;
             }
         }
     }
@@ -695,7 +702,7 @@
 
 
     div.offer {
-        width: 70px;
+        width: 78px;
         height: 30px;
         font-size: 16px;
         background-color: rgba(255, 128, 0, 1);
@@ -845,6 +852,7 @@ div.Item {
     align-items: center;
     height: 115px;
     width: 335px;
+    cursor: pointer;
 
     div.item-img {
         width: 115px;

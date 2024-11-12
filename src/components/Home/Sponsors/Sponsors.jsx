@@ -25,16 +25,11 @@ const Sponsors = () => {
                     speed={50}
                 >
                     <Sponsor image={Kazaf} name="الخزف" />
-                    <Sponsor
-                        image={Bd}
-                        name="هدايا عيد الميلاد"
-                        isSelected={true}
-                    />
+                    <Sponsor image={Bd} name="هدايا عيد الميلاد" />
                     <Sponsor image={Lights} name="الإضاءة" />
                     <Sponsor image={Fern} name="الأثاث" />
                     <Sponsor image={Kitchen} name="أغراض المطبخ" />
                     <Sponsor image={decore} name="الديكور" />
-                    <Sponsor image={Kazaf} name="الخزف" />
                 </Marquee>
             </div>
             <ArrowL direction="left" onClick={() => setDirection('left')} />

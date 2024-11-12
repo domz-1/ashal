@@ -29,7 +29,7 @@ const ProductList = ({
             {visibleProducts.map((product, index) => (
                 <li
                     key={index}
-                    className={`cursor-pointer transition-all duration-300 hover:opacity-80 position-relative ${
+                    className={` item ${
                         index === 0 ? 'active border-2 border-blue-500' : ''
                     }`}
                     onClick={() =>
@@ -38,7 +38,10 @@ const ProductList = ({
                         )
                     }
                 >
-                    <div className={`blackifseclected`}></div>
+                    {index === 0 ? (
+                        <div className="blackifseclected"></div>
+                    ) : null}
+
                     <img
                         src={product.src}
                         className="w-full h-full object-cover"
