@@ -1,7 +1,7 @@
 import Img1 from '../../../assets/Img1.png';
 import Img2 from '../../../assets/Img2.png';
-import Img3 from '../../../assets/Img3.png';
-import Img4 from '../../../assets/Img4.png';
+import Img3 from '../../../assets/img3.png';
+import Img4 from '../../../assets/img4.png';
 
 // Utility function to generate a random date in the future
 const randomFutureDate = () => {
