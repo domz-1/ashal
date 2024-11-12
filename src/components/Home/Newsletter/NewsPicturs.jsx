@@ -7,7 +7,11 @@ const NewsPicturs = () => {
         <div className="NewsPicturs">
             <div className="Top">
                 <img src={TopLeft} alt="TopLeft" />
-                <img src={TopRight} alt="TopRight" />
+                <img
+                    src={TopRight}
+                    alt="TopRight"
+                    style={{ cursor: 'pointer' }}
+                />
             </div>
             <div className="Bottom">
                 <img src={BottomLeft} alt="BottomLeft" />
