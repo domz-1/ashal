@@ -46,16 +46,8 @@ import React from 'react';
 import clsx from 'clsx';
 
 const Electronic = (props) => {
-    const {
-        img,
-        imgPos,
-        title,
-        header,
-        titleColor,
-        bgcolor,
-        className,
-        ...rest
-    } = props;
+    const { img, title, header, titleColor, bgcolor, className, ...rest } =
+        props;
 
     return (
         <div

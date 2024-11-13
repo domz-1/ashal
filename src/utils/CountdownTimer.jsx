@@ -41,7 +41,7 @@ const CountdownTimer = ({ targetDate }) => {
 
     return (
         <div className="Timer">
-            {timeUnits.map((unit, index) => (
+            {timeUnits.map((unit) => (
                 <div key={unit.english} className="unit">
                     <span className="number">
                         {unit.value.toString().padStart(2, '0')}

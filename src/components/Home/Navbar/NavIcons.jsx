@@ -1,6 +1,5 @@
 import { GoPerson } from 'react-icons/go';
 import { LuHeart } from 'react-icons/lu';
-import { HiOutlineArchiveBox } from 'react-icons/hi2';
 import Typography from '@mui/material/Typography';
 import { CgBox } from 'react-icons/cg';
 const NavIcons = () => {

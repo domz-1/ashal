@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ArrowL from '../../../utils/ArrowL.jsx';
 // Import images
 import Kazaf from '../../../assets/Kazaf.png';
 import Bd from '../../../assets/Bd.png';
@@ -14,7 +13,6 @@ const Sponsors = () => {
     const [direction, setDirection] = useState('left');
     return (
         <div className="sponsors">
-            {/* <ArrowL direction="right" onClick={() => setDirection('right')} /> */}
             <div className="marquee-wrapper">
                 <Marquee
                     direction={direction}
@@ -32,7 +30,6 @@ const Sponsors = () => {
                     <Sponsor image={decore} name="الديكور" />
                 </Marquee>
             </div>
-            {/* <ArrowL direction="left" onClick={() => setDirection('left')} /> */}
         </div>
     );
 };
