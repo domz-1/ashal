@@ -2,6 +2,9 @@
 
 An elegant and modern e-commerce platform built with React and Vite, featuring a responsive design and smooth user experience.
 
+![2024-11-13](https://github.com/user-attachments/assets/de95689f-6ebc-4e94-8422-db39b73757e4)
+
+
 ## 🌐 Live Demo
 
 [View Live Demo](https://domz-ashal.netlify.app/)
