@@ -1,111 +1,126 @@
 import React, { Suspense, useEffect } from 'react';
 import { Container } from '@mui/material';
+import { FallingLines } from 'react-loader-spinner';
 import Uppbanner from '../components/Home/Upperbanner/Uppbanner';
 import Navbar from '../components/Home/Navbar/Navbar';
 import LandingSlider from '../components/Home/LandingSlider/LandingSlider';
 
-const Offers = React.lazy(() => import('../components/Home/Offers/Offers'));
-const NewArrival = React.lazy(() =>
-    import('../components/Home/NewArrival/NewArrival')
-);
-const Sponsors = React.lazy(() =>
-    import('../components/Home/Sponsors/Sponsors')
-);
-const ElectronicsGrid = React.lazy(() =>
-    import('../components/Home/Electronic/ElectronicsGrid')
-);
-const CategoryWrapper = React.lazy(() =>
-    import('../components/Home/Categories/CategoryWrapper')
-);
-const WeekendOffer = React.lazy(() =>
-    import('../components/Home/WeekendOffer/WeekendOffer')
-);
-const MostCell = React.lazy(() =>
-    import('../components/Home/MostCellOld/MostCell')
-);
-const OurPartners = React.lazy(() =>
-    import('../components/Home/OurPartners/OurPartners')
-);
-const Newsletter = React.lazy(() =>
-    import('../components/Home/Newsletter/Newsletter')
-);
-const Features = React.lazy(() =>
-    import('../components/Home/Features/Features')
-);
-const Footer = React.lazy(() => import('../components/Home/Footer/Footer'));
-const TodaysOfferC = React.lazy(() =>
-    import('../components/Home/TodaysOffer/TodaysOfferC')
+// Group lazy-loaded components together
+const lazyComponents = {
+    Offers: React.lazy(() => import('../components/Home/Offers/Offers')),
+    NewArrival: React.lazy(() =>
+        import('../components/Home/NewArrival/NewArrival')
+    ),
+    Sponsors: React.lazy(() => import('../components/Home/Sponsors/Sponsors')),
+    ElectronicsGrid: React.lazy(() =>
+        import('../components/Home/Electronic/ElectronicsGrid')
+    ),
+    CategoryWrapper: React.lazy(() =>
+        import('../components/Home/Categories/CategoryWrapper')
+    ),
+    WeekendOffer: React.lazy(() =>
+        import('../components/Home/WeekendOffer/WeekendOffer')
+    ),
+    MostCell: React.lazy(() =>
+        import('../components/Home/MostCellOld/MostCell')
+    ),
+    OurPartners: React.lazy(() =>
+        import('../components/Home/OurPartners/OurPartners')
+    ),
+    Newsletter: React.lazy(() =>
+        import('../components/Home/Newsletter/Newsletter')
+    ),
+    Features: React.lazy(() => import('../components/Home/Features/Features')),
+    Footer: React.lazy(() => import('../components/Home/Footer/Footer')),
+    TodaysOfferC: React.lazy(() =>
+        import('../components/Home/TodaysOffer/TodaysOfferC')
+    ),
+};
+
+// Separate Loader component with proper styling
+const Loader = () => (
+    <div className="flex justify-center items-center min-h-[200px]">
+        <FallingLines
+            color="white"
+            width="100"
+            visible={true}
+            ariaLabel="falling-circles-loading"
+        />
+    </div>
 );
 
 const Home = () => {
     useEffect(() => {
+        // Scroll restoration
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
     }, []);
 
+    // Destructure lazy components
+    const {
+        Offers,
+        NewArrival,
+        Sponsors,
+        ElectronicsGrid,
+        CategoryWrapper,
+        WeekendOffer,
+        MostCell,
+        OurPartners,
+        Newsletter,
+        Features,
+        Footer,
+        TodaysOfferC,
+    } = lazyComponents;
+
     return (
         <div className="home">
+            {/* Static components */}
             <Uppbanner />
             <Navbar />
+
+            {/* Main content */}
             <Container>
                 <LandingSlider />
             </Container>
+
+            {/* Regular width sections */}
             <Container>
-                <Suspense fallback={<div>Loading Offers...</div>}>
+                <Suspense fallback={<Loader />}>
                     <Offers />
-                </Suspense>
-            </Container>
-            <Container
-                maxWidth="xl"
-                className="wrapper"
-                sx={{ width: '1500px' }}
-            >
-                <Suspense fallback={<div>Loading Sponsors...</div>}>
-                    <Sponsors />
-                </Suspense>
-                <Suspense fallback={<div>Loading New Arrivals...</div>}>
-                    <NewArrival />
-                </Suspense>
-            </Container>
-            <Container>
-                <Suspense fallback={<div>Loading Today's Offer...</div>}>
                     <TodaysOfferC />
-                </Suspense>
-            </Container>
-            <Container>
-                <Suspense fallback={<div>Loading Electronics Grid...</div>}>
                     <ElectronicsGrid />
-                </Suspense>
-                <Suspense fallback={<div>Loading Categories...</div>}>
                     <CategoryWrapper />
-                </Suspense>
-                <Suspense fallback={<div>Loading Weekend Offer...</div>}>
                     <WeekendOffer />
-                </Suspense>
-            </Container>
-            <Container
-                maxWidth="xl"
-                className="wrapper"
-                sx={{ width: '1500px' }}
-            >
-                <Suspense fallback={<div>Loading Most Cell...</div>}>
-                    <MostCell />
-                </Suspense>
-            </Container>
-            <Container>
-                <Suspense fallback={<div>Loading Our Partners...</div>}>
                     <OurPartners />
-                </Suspense>
-                <Suspense fallback={<div>Loading Newsletter...</div>}>
                     <Newsletter />
                 </Suspense>
             </Container>
-            <Suspense fallback={<div>Loading Features...</div>}>
+
+            {/* Wide sections */}
+            <Container
+                maxWidth="xl"
+                sx={{
+                    maxWidth: {
+                        xs: '100%',
+                        sm: '540px',
+                        md: '720px',
+                        lg: '1140px',
+                        xl: '1500px',
+                    },
+                }}
+            >
+                <Suspense fallback={<Loader />}>
+                    <Sponsors />
+                    <NewArrival />
+                    <MostCell />
+                </Suspense>
+            </Container>
+
+            {/* Footer sections */}
+            <Suspense fallback={<Loader />}>
                 <Features />
-            </Suspense>
-            <Suspense fallback={<div>Loading Footer...</div>}>
                 <Footer />
             </Suspense>
         </div>

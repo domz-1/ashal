@@ -5,6 +5,14 @@
     margin: 0;
 }
 
+.home {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 //TODO: Done 
 .uppbanner {
     background-color: rgba(78, 9, 93, 1);
