@@ -30,7 +30,7 @@ const NewsText = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     autoComplete="off"
-                    autoFocus={true}
+                    // autoFocus={true}
                     className="email-input"
                     placeholder=" بريدك الإلكتروني"
                 />
