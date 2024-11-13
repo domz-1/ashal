@@ -79,6 +79,7 @@ const Home = () => {
             {/* Static components */}
             <Uppbanner />
             <Navbar />
+            
 
             {/* Main content */}
             <Container>
@@ -88,6 +89,7 @@ const Home = () => {
             {/* Regular width sections */}
             <Container>
                 <Suspense fallback={<Loader />}>
+                    <Sponsors />
                     <Offers />
                     <TodaysOfferC />
                     <ElectronicsGrid />
@@ -112,7 +114,6 @@ const Home = () => {
                 }}
             >
                 <Suspense fallback={<Loader />}>
-                    <Sponsors />
                     <NewArrival />
                     <MostCell />
                 </Suspense>
