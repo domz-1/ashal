@@ -118,7 +118,11 @@ const Home = () => {
             </Container>
 
             <Container>
-                <Suspense fallback={<div>Loading Offers...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">Loading Offers...</div>
+                    }
+                >
                     <Offers />
                 </Suspense>
             </Container>
@@ -128,31 +132,63 @@ const Home = () => {
                 className="wrapper"
                 sx={{ width: '1500px' }}
             >
-                <Suspense fallback={<div>Loading Sponsors...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">Loading Sponsors...</div>
+                    }
+                >
                     <Sponsors />
                 </Suspense>
 
-                <Suspense fallback={<div>Loading New Arrivals...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">
+                            Loading New Arrivals...
+                        </div>
+                    }
+                >
                     <NewArrival />
                 </Suspense>
             </Container>
 
             <Container>
-                <Suspense fallback={<div>Loading Today's Offer...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">
+                            Loading Today's Offer...
+                        </div>
+                    }
+                >
                     <TodaysOfferC />
                 </Suspense>
             </Container>
 
             <Container>
-                <Suspense fallback={<div>Loading Electronics Grid...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">
+                            Loading Electronics Grid...
+                        </div>
+                    }
+                >
                     <ElectronicsGrid />
                 </Suspense>
 
-                <Suspense fallback={<div>Loading Categories...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">Loading Categories...</div>
+                    }
+                >
                     <CategoryWrapper />
                 </Suspense>
 
-                <Suspense fallback={<div>Loading Weekend Offer...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">
+                            Loading Weekend Offer...
+                        </div>
+                    }
+                >
                     <WeekendOffer />
                 </Suspense>
             </Container>
@@ -162,26 +198,44 @@ const Home = () => {
                 className="wrapper"
                 sx={{ width: '1500px' }}
             >
-                <Suspense fallback={<div>Loading Most Cell...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">Loading Most Cell...</div>
+                    }
+                >
                     <MostCell />
                 </Suspense>
             </Container>
 
             <Container>
-                <Suspense fallback={<div>Loading Our Partners...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">
+                            Loading Our Partners...
+                        </div>
+                    }
+                >
                     <OurPartners />
                 </Suspense>
 
-                <Suspense fallback={<div>Loading Newsletter...</div>}>
+                <Suspense
+                    fallback={
+                        <div className="text-white">Loading Newsletter...</div>
+                    }
+                >
                     <Newsletter />
                 </Suspense>
             </Container>
 
-            <Suspense fallback={<div>Loading Features...</div>}>
+            <Suspense
+                fallback={<div className="text-white">Loading Features...</div>}
+            >
                 <Features />
             </Suspense>
 
-            <Suspense fallback={<div>Loading Footer...</div>}>
+            <Suspense
+                fallback={<div className="text-white">Loading Footer...</div>}
+            >
                 <Footer />
             </Suspense>
         </div>
