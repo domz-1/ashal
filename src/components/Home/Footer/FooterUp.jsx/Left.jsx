@@ -6,7 +6,6 @@ const Left = () => {
             <p className="title">حساباتي</p>
             <div className="links">
                 <p style={{ cursor: 'pointer' }}>حسابي</p>
-                <p style={{ cursor: 'pointer' }}>تسجيل الدخول/التسجيل</p>
                 <p style={{ cursor: 'pointer' }}>سلة المشتريات</p>
                 <p style={{ cursor: 'pointer' }}>الأسئلة الشائعة</p>
                 <p style={{ cursor: 'pointer' }}>تواصل معنا</p>
